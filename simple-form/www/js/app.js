@@ -57,7 +57,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       }
     }
   })
-
+  .state('tab.mission', {
+    url: '/mission',
+    views: {
+      'tab-mission': {
+        templateUrl: 'templates/tab-mission.html',
+        controller: 'MissionCtrl'
+      }
+    }
+  })
   .state('tab.dash', {
     url: '/dash',
     views: {

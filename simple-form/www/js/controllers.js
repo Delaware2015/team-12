@@ -26,6 +26,11 @@ angular.module('starter.controllers', [])
     enableFriends: true
   };
 })
+
+.controller('MissionCtrl', function($scope) {
+ 
+})
+
 .controller('FeedbackCtrl', function($scope, FeedbackService, $ionicPopup, $state) {
     $scope.data = {};
  
