@@ -4,10 +4,14 @@ Each tab's child <ion-nav-view> directive will have its own
 navigation history that also transitions its views in and out.
 -->
 <ion-tabs class="tabs-icon-top tabs-color-active-positive">
-
   <!-- Newsfeed Tab -->
-  <ion-tab title="Status" icon-off="ion-ios-paper" icon-on="ion-ios-paper-outline" href="#/tab/newsfeed">
+  <ion-tab title="Newsfeed" icon-off="ion-ios-paper" icon-on="ion-ios-paper-outline" href="#/tab/newsfeed">
     <ion-nav-view name="tab-newsfeed"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Calculator Tab -->
+  <ion-tab title="Calculator" icon-off="ion-ios-calculator" icon-on="ion-ios-calculator-outline" href="#/tab/calculator">
+    <ion-nav-view name="tab-calculator"></ion-nav-view>
   </ion-tab>
 
 </ion-tabs>

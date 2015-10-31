@@ -1,0 +1,24 @@
+<ion-view view-title="Calculator">
+  <ion-content class="padding">
+    <ion-list>
+      <ion-item ng-repeat="donation in basket" class="list card">
+        <div class="calculator-name">{{donation.item.name}}</div>
+        <input class="calculator-quantity" type="number" ng-model="donation.itemQuantity" ng-change="updateTotal(basket)"/>
+      </ion-item>
+    </ion-list>
+
+    <form ng-if="showAddNew">
+      <input ng-model="newDonation.quantity" type="number" min="1" required />
+      <br/>
+      <select ng-model="newDonation.typeId" ng-change="itemTypeChange(newDonation)">
+        <option ng-repeat="type in typesArray" value="{{type.id}}">{{type.name}}</option>
+      </select>
+      <br/>
+      <select ng-show="newDonation.typeId != 0" ng-model="newDonation.itemId">
+        <option ng-repeat="item in itemOptions" value="{{item.id}}">{{item.name}}</option>
+      </select>
+      <br/>
+      <input type="submit" value="Add Item" ng-click="addItem(newDonation)" ng-disabled="newDonation.quantity == 0 || newDonation.itemId == 0"/>
+    </form>
+  </ion-content>
+</ion-view>

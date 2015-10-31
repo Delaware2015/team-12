@@ -1,0 +1,50 @@
+[
+	{
+		"id"	: 1,
+		"name" : "Blouse",
+		"type" : 1,
+		"price" : 4
+	},
+	{
+		"id"	: 2,
+		"name" : "Sweater",
+		"type" : 1,
+		"price" : 4
+	},
+	{
+		"id"	: 3,
+		"name" : "Slacks",
+		"type" : 1,
+		"price" : 4
+	},
+		{
+		"id"	: 4,
+		"name" : "Dress",
+		"type" : 1,
+		"price" : 4
+	},
+	{
+		"id"	: 5,
+		"name" : "Shirt",
+		"type" : 2,
+		"price" : 4
+	},
+	{
+		"id"	: 6,
+		"name" : "Sweater",
+		"type" : 2,
+		"price" : 4
+	},
+		{
+		"id"	: 7,
+		"name" : "Shoes",
+		"type" : 3,
+		"price" : 3
+	},
+	{
+		"id"	: 8,
+		"name" : "Snowsuit",
+		"type" : 3,
+		"price" : 2
+	}
+]
