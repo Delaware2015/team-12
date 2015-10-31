@@ -188,6 +188,121 @@ position4 = new google.maps.LatLng(39.667206, -75.591055);
 				title: 'Your Location'
 
 			});
+			position8 = new google.maps.LatLng(39.796913, -75.468018);
+			var contentString8 = '<div id="content">'+
+			'<div id="siteNotice">'+
+			'</div>'+
+			'<div id="bodyContent">'+
+			'<p><u><b>5.5 Miles</b></u>' + '<br />' +
+			'<p><u><b>Claymont</b></u>' + 
+			'<br />'+ '2701 Philadelphia Pike' +
+			'<br />'+ 'Wilmington, DE 19802' +
+			'<br />'+ '<u>(302) 798-9047</u>' +
+			'<br />'+ '<b> M-F </b> 9:00AM-8:00PM' +
+			'<br />'+ '<b> Sat </b> 9:00AM-6:00PM' +
+			'<br />'+ '<b> Sun </b> 12:00PM-5:00PM' +
+			'</div>'+
+			'</div>';
+
+			var infowindow8 = new google.maps.InfoWindow({
+				content: contentString8
+			});
+			var marker9 = new google.maps.Marker({
+				position: position8,
+				map: map,
+				icon: iconBase + 'goodwill.bmp'
+			});
+			marker9.addListener('click', function() {
+				infowindow8.content = contentString8;
+				infowindow8.open(map, marker9);
+			});
+
+			position9 = new google.maps.LatLng(39.836233, -75.442214);
+			var contentString9 = '<div id="content">'+
+			'<div id="siteNotice">'+
+			'</div>'+
+			'<div id="bodyContent">'+
+			'<p><u><b>8.3 Miles</b></u>' + '<br />' +
+			'<p><u><b>Chichester</b></u>' + 
+			'<br />'+ '3294 Chichester Ave' +
+			'<br />'+ 'Boothwyn, PA 19061' +
+			'<br />'+ '<u>(302) 761-4640</u>' +
+			'<br />'+ '<b> M-F </b> 9:00AM-8:00PM' +
+			'<br />'+ '<b> Sat </b> 9:00AM-6:00PM' +
+			'<br />'+ '<b> Sun </b> 12:00PM-5:00PM' +
+			'</div>'+
+			'</div>';
+
+			var infowindow9 = new google.maps.InfoWindow({
+				content: contentString9
+			});
+			var marker10 = new google.maps.Marker({
+				position: position9,
+				map: map,
+				icon: iconBase + 'goodwill.bmp'
+			});
+			marker10.addListener('click', function() {
+				infowindow9.content = contentString9;
+				infowindow9.open(map, marker10);
+			});
+
+			position10 = new google.maps.LatLng(39.856174, -75.538859);
+			var contentString10 = '<div id="content">'+
+			'<div id="siteNotice">'+
+			'</div>'+
+			'<div id="bodyContent">'+
+			'<p><u><b>5.2 Miles</b></u>' + '<br />' +
+			'<p><u><b>Chadds Ford</b></u>' + 
+			'<br />'+ '255 Wilmington West Chester Pike' +
+			'<br />'+ 'Chadds Ford, PA 19317' +
+			'<br />'+ '<u>(610) 558-3722</u>' +
+			'<br />'+ '<b> M-F </b> 9:00AM-8:00PM' +
+			'<br />'+ '<b> Sat </b> 9:00AM-6:00PM' +
+			'<br />'+ '<b> Sun </b> 12:00PM-5:00PM' +
+			'</div>'+
+			'</div>';
+
+			var infowindow10 = new google.maps.InfoWindow({
+				content: contentString10
+			});
+			var marker11 = new google.maps.Marker({
+				position: position10,
+				map: map,
+				icon: iconBase + 'goodwill.bmp'
+			});
+			marker11.addListener('click', function() {
+				infowindow10.content = contentString10;
+				infowindow10.open(map, marker11);
+			});
+
+			position11 = new google.maps.LatLng(39.894753, -75.354296);
+			var contentString11 = '<div id="content">'+
+			'<div id="siteNotice">'+
+			'</div>'+
+			'<div id="bodyContent">'+
+			'<p><u><b>15.6 Miles</b></u>' + '<br />' +
+			'<p><u><b>Swarthmore</b></u>' + 
+			'<br />'+ '725 S. Chester road' +
+			'<br />'+ 'Swarthmore, PA 19081' +
+			'<br />'+ '<u>(610) 543-4399</u>' +
+			'<br />'+ '<b> M-F </b> 9:00AM-8:00PM' +
+			'<br />'+ '<b> Sat </b> 9:00AM-6:00PM' +
+			'<br />'+ '<b> Sun </b> 12:00PM-5:00PM' +
+			'</div>'+
+			'</div>';
+
+			var infowindow11 = new google.maps.InfoWindow({
+				content: contentString11
+			});
+			var marker12 = new google.maps.Marker({
+				position: position11,
+				map: map,
+				icon: iconBase + 'goodwill.bmp'
+			});
+			marker12.addListener('click', function() {
+				infowindow11.content = contentString11;
+				infowindow11.open(map, marker12);
+			});
 
 		}, function() {
 			handleLocationError(true, infoWindow, map.getCenter());
