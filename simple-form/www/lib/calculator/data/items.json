@@ -23,28 +23,315 @@
 		"type" : 1,
 		"price" : 4
 	},
-	{
+
+		{
 		"id"	: 5,
+		"name" : "Suits",
+		"type" : 1,
+		"price" : 10
+	},
+
+		{
+		"id"	: 6,
+		"name" : "Coat",
+		"type" : 1,
+		"price" : 8
+	},
+
+		{
+		"id"	: 7,
+		"name" : "Handbag",
+		"type" : 1,
+		"price" : 4
+	},
+
+		{
+		"id"	: 8,
+		"name" : "Shoes",
+		"type" : 1,
+		"price" : 5
+	},
+
+	{
+		"id"	: 9,
 		"name" : "Shirt",
 		"type" : 2,
 		"price" : 4
 	},
 	{
-		"id"	: 6,
+		"id"	: 10,
 		"name" : "Sweater",
 		"type" : 2,
 		"price" : 4
 	},
 		{
-		"id"	: 7,
+		"id"	: 11,
+		"name" : "Slacks",
+		"type" : 2,	
+		"price" : 4
+	},
+	{
+		"id"	: 12,
+		"name" : "Suit",
+		"type" : 2,
+		"price" : 15
+	},
+
+	{
+		"id"	: 13,
+		"name" : "Shoes",
+		"type" : 2,
+		"price" : 5
+	},
+
+		{
+		"id"	: 14,
+		"name" : "Coat",
+		"type" : 2,
+		"price" : 8
+	},
+
+		{
+		"id"	: 15,
+		"name" : "Wallet",
+		"type" : 2,
+		"price" : 1
+	},
+
+	{
+		"id"	: 16,
+		"name" : "Shirt",
+		"type" : 3,
+		"price" : 2
+	},
+
+		{
+		"id"	: 17,
+		"name" : "Sweater",
+		"type" : 3,
+		"price" : 2
+	},
+
+		{
+		"id"	: 18,
+		"name" : "Pants/Jeans",
+		"type" : 3,
+		"price" : 2
+	},
+
+		{
+		"id"	: 19,
+		"name" : "Dress",
+		"type" : 3,
+		"price" : 3
+	},
+
+		{
+		"id"	: 20,
 		"name" : "Shoes",
 		"type" : 3,
 		"price" : 3
 	},
-	{
-		"id"	: 8,
+
+		{
+		"id"	: 21,
 		"name" : "Snowsuit",
 		"type" : 3,
 		"price" : 2
+	},
+
+		{
+		"id"	: 22,
+		"name" : "Microwave",
+		"type" : 4,
+		"price" : 5
+	},
+
+		{
+		"id"	: 23,
+		"name" : "Iron",
+		"type" : 4,
+		"price" : 3
+	},
+
+		{
+		"id"	: 24,
+		"name" : "Vacuum",
+		"type" : 4,
+		"price" : 5
+	},
+
+		{
+		"id"	: 25,
+		"name" : "Coffee Maker",
+		"type" : 4,
+		"price" : 3
+	},
+
+		{
+		"id"	: 26,
+		"name" : "Pillow",
+		"type" : 5,
+		"price" : 2
+	},
+
+		{
+		"id"	: 27,
+		"name" : "Sheet",
+		"type" : 5,
+		"price" : 2
+	},
+
+		{
+		"id"	: 28,
+		"name" : "Blanket",
+		"type" : 5,
+		"price" : 3
+	},
+
+		{
+		"id"	: 29,
+		"name" : "Curtains",
+		"type" : 5,
+		"price" : 3
+	},
+
+		{
+		"id"	: 30,
+		"name" : "Drapes",
+		"type" : 5,
+		"price" : 5
+	},
+
+		{
+		"id"	: 31,
+		"name" : "Area Rug",
+		"type" : 5,
+		"price" : 5
+	},
+
+		{
+		"id"	: 32,
+		"name" : "Books",
+		"type" : 5,
+		"price" : 1
+	},
+
+		{
+		"id"	: 33,
+		"name" : "Dishes",
+		"type" : 5,
+		"price" : 3
+	},
+
+		{
+		"id"	:34 ,
+		"name" : "Pots/Pans",
+		"type" : 5,
+		"price" : 2
+	},
+
+		{
+		"id"	: 35,
+		"name" : "Sofa",
+		"type" : 6,
+		"price" : 30
+	},
+
+		{
+		"id"	: 36,
+		"name" : "Love Seat",
+		"type" : 6,
+		"price" : 20
+	},
+
+		{
+		"id"	: 37,
+		"name" : "Chair",
+		"type" : 6,
+		"price" : 10
+	},
+
+		{
+		"id"	: 38,
+		"name" : "Lamp",
+		"type" : 6,
+		"price" : 5
+	},
+
+		{
+		"id"	: 39,
+		"name" : "Kitchen Set",
+		"type" : 6,
+		"price" : 40
+	},
+
+		{
+		"id"	: 40,
+		"name" : "End Tables",
+		"type" : 6,
+		"price" : 4
+	},
+
+		{
+		"id"	: 41,
+		"name" : "Wardrobe",
+		"type" : 6,
+		"price" : 15
+	},
+
+		{
+		"id"	: 42,
+		"name" : "Coffee Table",
+		"type" : 6,
+		"price" : 10
+	},
+
+		{
+		"id"	: 43,
+		"name" : "CHest",
+		"type" : 6,
+		"price" : 5
+	},
+
+		{
+		"id"	: 44,
+		"name" : "Dresser",
+		"type" : 6,
+		"price" : 15
+	},
+
+		{
+		"id"	: 45,
+		"name" : "Computer",
+		"type" : 7,
+		"price" : 50
+	},
+
+		{
+		"id"	: 46,
+		"name" : "Printer",
+		"type" : 7,
+		"price" : 10
+	},
+		{
+		"id"	: 47,
+		"name" : "Scanner",
+		"type" : 7,
+		"price" : 5
+	},
+
+		{
+		"id"	: 48,
+		"name" : "Radio",
+		"type" : 7,
+		"price" : 4
+	},
+
+		{
+		"id"	: 49,
+		"name" : "Television",
+		"type" : 7,
+		"price" : 15
 	}
 ]
