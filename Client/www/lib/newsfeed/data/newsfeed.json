@@ -1,0 +1,12 @@
+[
+	{
+		"id" : 1,
+		"title" : "Good Will Halloween Constume Contest",
+		"message" : "Attention Ghouls and Gals. Enter for the chance to win. 3 Prize Categories, including a chance for a $250 Amazon Gift Card.",
+		"type" : "Contest",
+		"startDate" : "Oct 1 2015 00:00:00 GMT-0400 (EDT)",
+		"endDate" : "Nov 5 2015 00:00:00 GMT-0400 (EDT)",
+		"submitted" : "Oct 1 2015 00:00:00 GMT-0400 (EDT)",
+		"stores" : [1,2,3,4,5,6,7]
+	}
+]
