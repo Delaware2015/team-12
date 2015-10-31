@@ -12,3 +12,12 @@
 	display: inline-block;
 	text-alighn: right;
 }
+
+#map {
+  width: 100%;
+  height: 80%;
+}
+
+.scroll {
+  height: 100%;
+}

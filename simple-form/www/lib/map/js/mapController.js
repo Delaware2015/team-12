@@ -1,7 +1,10 @@
-angular.module('ionic.example', ['ionic'])
+angular.module('map', ['ionic'])
+	.controller('MapController', function($scope, $ionicLoading, $compile) {
+		console.log("asdf");
 
-.controller('LocatorCtrl', function($scope, $ionicLoading, $compile) {
 	function initialize() {
+
+
 		var myposition;
 		var position1;
 		navigator.geolocation.getCurrentPosition(function(position, myposition) {
@@ -201,14 +204,19 @@ position4 = new google.maps.LatLng(39.667206, -75.591055);
        //window.alert(service);
        $scope.map = map;
      }
-     google.maps.event.addDomListener(window, 'load', initialize);
-
-     $scope.Searchgoodwill() = function() {
-
-     };
+     //google.maps.event.addDomListener(window, 'load', initialize);
 
      $scope.clickTest = function() {
      	alert('Example of infowindow with ng-click')
      };
 
-   });
+     $scope.onLoad = initialize;
+
+   })
+	.directive('ngMap', function() {
+	  return {
+	  	restrict: 'E',
+	    template: '<div id="map"></div>',
+	    link: function(scope) { scope.onLoad(); }
+	  };
+	});
