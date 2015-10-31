@@ -1,4 +1,3 @@
-console.log("asdf")
 angular.module("newsfeed", [])
 	.controller("newsFeedController", ["$scope", "newsFeedService", function($scope, newsFeedService) {
 		$scope.newsfeed = newsFeedService.getLastFeed();
