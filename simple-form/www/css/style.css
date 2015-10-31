@@ -1,1 +1,14 @@
 /* Empty. Add your own CSS if you like */
+.right-justify {
+    text-align:right;
+}
+
+.header-left {
+	display: inline-block;
+	text-alighn: left;
+}
+
+.header-right {
+	display: inline-block;
+	text-alighn: right;
+}
