@@ -1,13 +1,14 @@
-<ion-view view-title="Feedback" name="feedback-view">
+<ion-view view-title="Customer Feedback" name="feedback-view">
   <ion-content class="padding">
       <div class="list list-inset">
           <label class="item item-input">
-              <input type="text" placeholder="Feedback" ng-model="data.username">
+              <input type="text" placeholder="Please tell us how your experience was today." ng-model="data.username">
           </label>
 		     <ion-checkbox  ng-model="settings.donation">
-				Is this for a Donation?
+				Click the circle if you Donated today.
 			</ion-checkbox>
+
       </div>
       <button class="button button-block button-calm" ng-click="feedback()">Submit</button>
-  </ion-content>
+      </ion-content>
 </ion-view>
