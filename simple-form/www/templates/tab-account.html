@@ -1,9 +1,19 @@
 <ion-view view-title="Account">
   <ion-content>
     <ion-list>
+	<h4>Progress</h4>
+	<progress max="100" value="85"> </progress>
     <ion-toggle  ng-model="settings.enableFriends">
-        Enable Friends
+        Enable Notifications
     </ion-toggle>
+	  <div class="item item-input-inset">
+		<label class="item-input-wrapper">
+			<input type="text" placeholder="Email">
+		</label>
+		<button class="button button-small">
+			Submit
+		</button>
+  </div>
     </ion-list>
   </ion-content>
 </ion-view>
