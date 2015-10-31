@@ -1,8 +1,6 @@
-<ion-nav-bar><div ng-bind="total"></div></ion-nav-bar>
 <ion-view view-title="Calculator">
-  <ion-content class="padding">
-    <h2 ng-bind="total"></h2>
-
+<ion-content class="padding">
+    <div class="title">Total:</div><div ng-bind="total"></div>
     <ion-list>
       <ion-item ng-repeat="donation in basket" class="list card">
         <div>{{ donation.item.name }} -- {{ donation.type.name }}</div>
@@ -11,16 +9,24 @@
     </ion-list>
 
     <form ng-if="showAddNew">
-      <input ng-model="newDonation.quantity" type="number" min="1" required />
-      <br/>
-      <select ng-model="newDonation.typeId" ng-change="itemTypeChange(newDonation)">
-        <option ng-repeat="type in typesArray" value="{{type.id}}">{{type.name}}</option>
-      </select>
-      <br/>
-      <select ng-show="newDonation.typeId != 0" ng-model="newDonation.itemId">
-        <option ng-repeat="item in itemOptions" value="{{item.id}}">{{item.name}}</option>
-      </select>
-      <br/>
+      <label class="item item-input item-select">
+        <div class="inut-label">Type: </div>
+        <select ng-model="newDonation.typeId" ng-change="itemTypeChange(newDonation)">
+          <option ng-repeat="type in typesArray" value="{{type.id}}">{{type.name}}</option>
+        </select>
+      </label>
+      <br />
+      <label class="item item-input item-select">
+        <div class="inut-label">Item: </div>
+        <select ng-show="newDonation.typeId != 0" ng-model="newDonation.itemId">
+          <option ng-repeat="item in itemOptions" value="{{item.id}}">{{item.name}}</option>
+        </select>
+      </label>
+      <br />
+      <label class="item item-input">
+        <span class="input-label">Quantity</span>
+        <input class="right-justify" ng-model="newDonation.quantity" type="number" min="1" required />
+      </label>
       <input type="submit" value="Add Item" ng-click="addItem(newDonation)" ng-disabled="newDonation.quantity == 0 || newDonation.itemId == 0"/>
     </form>
   </ion-content>
