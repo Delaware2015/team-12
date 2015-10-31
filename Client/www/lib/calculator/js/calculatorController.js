@@ -15,6 +15,8 @@ angular.module("calculator",[])
 			typeId : 0,
 			itemId : 0
 		}
+		// total of all donations in basket
+		$scope.total = 0;
 
 		/**
 		*	Add a new item to the list and update the total
@@ -55,5 +57,11 @@ angular.module("calculator",[])
 		function(newVal, oldval) {
 			$scope.typesArray = calculatorService.getTypesArray();
 			$scope.showAddNew = true;
+		})
+
+		$scope.$watch(function() {
+			return calculatorService.getTotal();
+		}, function(newVal) {
+			$scope.total = newVal;
 		})
 	}]);
