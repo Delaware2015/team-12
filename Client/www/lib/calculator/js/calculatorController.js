@@ -15,25 +15,21 @@ angular.module("calculator",[])
 			typeId : 0,
 			itemId : 0
 		}
-		$scope.total = 0;
-		$scope.updateTotal = function(basket) {
-			$scope.total = calculatorService.totalDonations(basket);
-		}
 
 		/**
 		*	Add a new item to the list and update the total
 		*/
 		$scope.addItem = function(newDonation) {
-			var donation = calculatorService.addDonation(newDonation.itemId, newDonation.quantity);
-			if(donation) {
-				$scope.basket.push(donation);				
+			if(newDonation.quantity > 0) {
+				var donation = calculatorService.addDonation(newDonation.itemId, newDonation.quantity);
+				if(donation) {
+					$scope.basket.push(donation);				
+				}
+
+				newDonation.typeId = 0;
+				newDonation.itemId = 0;
+				newDonation.quantity = 0;				
 			}
-
-			$scope.total = calculatorService.totalDonations($scope.basket);
-
-			newDonation.typeId = 0;
-			newDonation.itemId = 0;
-			newDonation.quantity = 0;
 		}
 
 		/**

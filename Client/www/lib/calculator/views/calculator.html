@@ -1,9 +1,12 @@
+<ion-nav-bar><div ng-bind="total"></div></ion-nav-bar>
 <ion-view view-title="Calculator">
   <ion-content class="padding">
+    <h2 ng-bind="total"></h2>
+
     <ion-list>
       <ion-item ng-repeat="donation in basket" class="list card">
-        <div class="calculator-name">{{donation.item.name}}</div>
-        <input class="calculator-quantity" type="number" ng-model="donation.itemQuantity" ng-change="updateTotal(basket)"/>
+        <div>{{donation.item.name}}</div>
+        <div ng-bind="donation.itemQuantity"></div>
       </ion-item>
     </ion-list>
 

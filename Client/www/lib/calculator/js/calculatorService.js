@@ -17,6 +17,9 @@ angular.module("calculator")
 		// donations indexed by the item id of the donated item
 		var donations = {};
 
+		// current donation total
+		var total = 0;
+
 		/**
 		 *	DonateableItemType Constructor
 		 *	@param {Object} details for a donateable item type
@@ -93,10 +96,11 @@ angular.module("calculator")
 		*	is the first donation of this itemId, else null
 		*/
 		function addDonation(itemId, quantity) {
+			var item = itemsIndexedById[itemId];
+			total += item.cost * quantity;
+
 			// there aren't any of this item already being donated
 			if(! donations[itemId]) {
-				var item = itemsIndexedById[itemId];
-
 				var currentDonation = new Donation(item, quantity);
 				donations[itemId] = currentDonation;
 				return currentDonation;
@@ -106,6 +110,15 @@ angular.module("calculator")
 				donations[itemId].itemQuantity += quantity;
 				return null;
 			}
+		}
+
+		/**
+		 *	Find the total value of all donations in an array
+		 */
+		function getTotalDonation(donationArray) {
+			return donationArray.reduce(function(carry, d) {
+				return carry + d.itemQuantity * d.item.cost;
+			}, 0);
 		}
 
 		// initialize itemTypes and donateableItems
@@ -122,10 +135,8 @@ angular.module("calculator")
 			getDonateableItemsByType : function(x) {
 				return itemsIndexedByType[x];
 			},
-			totalDonations : function(donationArray) {
-				return donationArray.reduce(function(carry, d) {
-					return carry + d.itemQuantity * d.item.cost;
-				}, 0);
+			getTotal : function() {
+				return total;
 			}
 		};
 	}])
