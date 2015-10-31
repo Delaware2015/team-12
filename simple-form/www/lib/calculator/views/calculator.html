@@ -5,7 +5,7 @@
 
     <ion-list>
       <ion-item ng-repeat="donation in basket" class="list card">
-        <div>{{donation.item.name}}</div>
+        <div>{{ donation.item.name }} -- {{ donation.type.name }}</div>
         <div ng-bind="donation.itemQuantity"></div>
       </ion-item>
     </ion-list>

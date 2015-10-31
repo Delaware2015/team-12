@@ -45,9 +45,10 @@ angular.module("calculator")
 		*	@param {DonateableItem} item 		the id of the item being donated
 		*   @param {Number} 		quantity	the quantity of the item being donated
 		*/
-		function Donation(item, quantity) {
+		function Donation(item, quantity, type) {
 			this.item = item;
 			this.itemQuantity = quantity;
+			this.type = type;
 		}
 
 		/**
@@ -101,7 +102,10 @@ angular.module("calculator")
 
 			// there aren't any of this item already being donated
 			if(! donations[itemId]) {
-				var currentDonation = new Donation(item, quantity);
+				// get the item 
+				var type = itemTypes.filter(function(x) { return item.type === x.id; }).pop();
+
+				var currentDonation = new Donation(item, quantity, type);
 				donations[itemId] = currentDonation;
 				return currentDonation;
 			}
