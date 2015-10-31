@@ -1,6 +1,5 @@
 angular.module("calculator",[])
 	.controller("calculatorController",["calculatorService", "$scope", function(calculatorService,$scope) {
-		
 		// item types
 		$scope.typesArray = calculatorService.getTypesArray();
 		// available items of the selected sub-type

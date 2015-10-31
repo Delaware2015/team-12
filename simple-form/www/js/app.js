@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'newsfeed', 'calculator'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -32,13 +32,31 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   $stateProvider
 
   // setup an abstract state for the tabs directive
-    .state('tab', {
+  .state('tab', {
     url: '/tab',
     abstract: true,
     templateUrl: 'templates/tabs.html'
   })
 
   // Each tab has its own nav history stack:
+  .state('tab.calculator', {
+      url: '/calculator',
+    views: {
+      'calculator': {
+      templateUrl: 'lib/calculator/views/calculator.html',
+      controller: 'calculatorController'
+      }
+    }
+  })
+  .state('tab.newsfeed', {
+      url: '/newsfeed',
+    views: {
+      'newsfeed': {
+      templateUrl: 'lib/newsfeed/views/newsfeed.html',
+      controller: 'newsFeedController'
+      }
+    }
+  })
 
   .state('tab.dash', {
     url: '/dash',
@@ -59,15 +77,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       }
     })
-    .state('tab.event-detail', {
-      url: '/events/:eventId',
-      views: {
-        'tab-events': {
-          templateUrl: 'templates/event-detail.html',
-          controller: 'EventDetailCtrl'
-        }
+
+  .state('tab.event-detail', {
+    url: '/events/:eventId',
+    views: {
+      'tab-events': {
+        templateUrl: 'templates/event-detail.html',
+        controller: 'EventDetailCtrl'
       }
-    })
+    }
+  })
 
   .state('tab.account', {
     url: '/account',
@@ -79,12 +98,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
   
-    .state('login', {
+  .state('login', {
       url: '/login',
       templateUrl: 'templates/login.html',
       controller: 'LoginCtrl'
   })
-  
 
   .state('tab.feedback', {
       url: '/feedback',
@@ -95,7 +113,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 		  }
 	  }
   })
-
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/login');
 
