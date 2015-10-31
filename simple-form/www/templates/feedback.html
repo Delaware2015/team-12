@@ -7,7 +7,17 @@
 		     <ion-checkbox  ng-model="settings.donation">
 				Is this for a Donation?
 			</ion-checkbox>
-      </div>
+		
+		
+    <div class="list">
+		<p>How would you rate your experience</p>
+		<div class="item range range-positive">
+			<i class="icon ion-thumbsdown"></i>
+				<input type="range" name="volume" min="1" max="5" value="3">
+			<i class="icon ion-thumbsup"></i>
+		</div>
+	</div>
+	  
       <button class="button button-block button-calm" ng-click="feedback()">Submit</button>
   </ion-content>
 </ion-view>

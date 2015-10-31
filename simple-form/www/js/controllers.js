@@ -33,7 +33,7 @@ angular.module('starter.controllers', [])
         FeedbackService.feedbackUser($scope.data.username, $scope.data.donate).success(function(data) {
             $scope.data.username="";
 			$scope.data.donate=false;
-			$state.go('tab.dash');
+			$state.go('tab.events');
 			
         }).error(function(data) {
             var alertPopup = $ionicPopup.alert({
@@ -49,7 +49,7 @@ angular.module('starter.controllers', [])
  
     $scope.login = function() {
         LoginService.loginUser($scope.data.username, $scope.data.password).success(function(data) {
-            $state.go('tab.dash');
+            $state.go('tab.events');
         }).error(function(data) {
             var alertPopup = $ionicPopup.alert({
                 title: 'Login failed!',
