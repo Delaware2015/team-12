@@ -7,23 +7,23 @@ angular.module('starter.services', [])
   var events = [{
     id: 0,
     store: 'Greenwood',
-    description: 'Sale',
-    image: ''
+    description: 'Sale on men\'s clothing',
+    image: 'https://www.goodwillde.org/wp-content/uploads/2014/10/logo.png'
   }, {
     id: 1,
     store: 'Dover',
-    description: 'Clothing drive',
-    image: ''
+    description: 'Golf Outing',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/e/e6/Golfball.jpg'
   }, {
     id: 2,
     store: 'Wilmington',
-    description: 'Bulk sale',
-    image: ''
+    description: 'Inspiration Awards',
+    image: 'https://www.goodwillde.org/events/inspirationawards/img/lunchlogo.png'
   }, {
     id: 3,
     store: 'Newark',
-    description: 'Sale on men\'s clothing',
-    image: ''
+    description: 'Winter clothing drive',
+    image: 'http://s3-media1.fl.yelpcdn.com/bphoto/d_pMq3RqZw0fOuAJ_t8Aig/ls.jpg'
   } ];
 
   return {
